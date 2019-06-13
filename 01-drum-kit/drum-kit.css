@@ -1,3 +1,51 @@
-p {
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/07/03/53/drums-2599508_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pageTitle {
     font-size: 42px;
+}
+
+.instruments {
+    display: flex;
+    margin-top: 60px;
+}
+
+.button {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #ecd8ca;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.loading {
+    border: 5px solid yellow;
+    transform: scale(1.1);
+}
+
+.key, .instrument {
+    color: black;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 40px;
+}
+
+.instrument {
+    position: absolute;
+    bottom: 10px;
 }
