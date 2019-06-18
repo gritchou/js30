@@ -1,13 +1,13 @@
 const drum = {
-    "Q": "Bass drum",
-    "S": "Floor tom",
-    "D": "Snare drum",
-    "F": "Hanging toms",
-    "G": "Hi-hat",
-    "H": "Crash cymbal",
-    "J": "Ride cymbal",
-    "K": "Splash cymbal",
-    "L": "China cymbal",
+    "Q": "clap",
+    "S": "hihat",
+    "D": "kick",
+    "F": "openhat",
+    "G": "boom",
+    "H": "ride",
+    "J": "snare",
+    "K": "tom",
+    "L": "tink",
 };
 
 const createInstruments = () => {
@@ -20,6 +20,10 @@ const createInstruments = () => {
 }
 
 const addInstrument =(instruments, instrumentKey) => {
+    const instrumentAudio = document.createElement("audio");
+    instrumentAudio.id = "audio-" + instrumentKey;
+    instrumentAudio.src = "sounds/" + drum[instrumentKey] + ".wav"
+
     const instrumentButton = document.createElement("div");
     instrumentButton.id = instrumentKey;
     instrumentButton.classList = "button";
@@ -35,12 +39,16 @@ const addInstrument =(instruments, instrumentKey) => {
     instrumentButton.appendChild(instrumentLabel);
 
     instruments.appendChild(instrumentButton);
+    instruments.appendChild(instrumentAudio);
 }
 
 const onKeyDown = (event) => {
     const instrumentId = event.key.toUpperCase();
     if (instrumentId) {
         document.getElementById(instrumentId).classList += " loading";
+        const audio = document.getElementById("audio-" + instrumentId);
+        audio.currentTime = 0;
+        audio.play();
     }
 }
 
@@ -54,4 +62,3 @@ const onKeyUp = (event) => {
 createInstruments();
 window.addEventListener("keydown", onKeyDown, false);
 window.addEventListener("keyup", onKeyUp, false);
-
