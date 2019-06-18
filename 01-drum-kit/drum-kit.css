@@ -4,15 +4,24 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .pageTitle {
     font-size: 42px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 .instruments {
     display: flex;
-    margin-top: 60px;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .button {
@@ -20,7 +29,6 @@ body {
     width: 150px;
     border-radius: 20px;
     background-color: #ecd8ca;
-    margin: 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

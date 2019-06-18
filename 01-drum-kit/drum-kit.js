@@ -19,7 +19,7 @@ const createInstruments = () => {
     document.body.appendChild(instruments);
 }
 
-const addInstrument =(instruments, instrumentKey) => {
+const addInstrument = (instruments, instrumentKey) => {
     const instrumentAudio = document.createElement("audio");
     instrumentAudio.id = "audio-" + instrumentKey;
     instrumentAudio.src = "sounds/" + drum[instrumentKey] + ".wav"
