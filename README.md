@@ -1,6 +1,6 @@
 # JavaScript 30
 
-This is my version of Javascript 30 by Wes Bos. You can find his Github [here](https://github.com/wesbos) and his Twitter [here](https://twitter.com/wesbos)
+This is my version of [Javascript 30](https://github.com/wesbos/JavaScript30) by Wes Bos. You can find his Github [here](https://github.com/wesbos) and his Twitter [here](https://twitter.com/wesbos)
 
 ## Author
 
