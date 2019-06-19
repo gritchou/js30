@@ -43,19 +43,19 @@ const addInstrument = (instruments, instrumentKey) => {
 }
 
 const onKeyDown = (event) => {
-    const instrumentId = event.key.toUpperCase();
-    const instrument = document.getElementById(instrumentId);
+    const instrumentId = '#' + event.key.toUpperCase();
+    const instrument = document.querySelector(instrumentId);
     if (instrument) {
         instrument.classList.add("loading");
-        const audio = document.getElementById("audio-" + instrumentId);
+        const audio = document.querySelector("#audio-" + event.key.toUpperCase());
         audio.currentTime = 0;
         audio.play();
     }
 }
 
 const onKeyUp = (event) => {
-    const instrumentId = event.key.toUpperCase();
-    const instrument = document.getElementById(instrumentId);
+    const instrumentId = '#' + event.key.toUpperCase();
+    const instrument = document.querySelector(instrumentId);
     if (instrument) {
         instrument.classList.remove("loading");
     }
