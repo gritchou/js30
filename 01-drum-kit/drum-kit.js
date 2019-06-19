@@ -44,8 +44,9 @@ const addInstrument = (instruments, instrumentKey) => {
 
 const onKeyDown = (event) => {
     const instrumentId = event.key.toUpperCase();
-    if (instrumentId) {
-        document.getElementById(instrumentId).classList += " loading";
+    const instrument = document.getElementById(instrumentId);
+    if (instrument) {
+        instrument.classList.add("loading");
         const audio = document.getElementById("audio-" + instrumentId);
         audio.currentTime = 0;
         audio.play();
@@ -54,8 +55,9 @@ const onKeyDown = (event) => {
 
 const onKeyUp = (event) => {
     const instrumentId = event.key.toUpperCase();
-    if (instrumentId) {
-        document.getElementById(instrumentId).classList.remove("loading");
+    const instrument = document.getElementById(instrumentId);
+    if (instrument) {
+        instrument.classList.remove("loading");
     }
 }
 
